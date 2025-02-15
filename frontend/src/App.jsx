@@ -6,6 +6,8 @@ import FSDash from './pages/FSDash';
 import FSRequest from './pages/FSRequest';
 import LocDash from './pages/LocDash';
 import LocSupply from './pages/LocSupply';
+import Login from './pages/Login';
+
 function App() {
   
 
@@ -19,6 +21,7 @@ function App() {
           <Route path='FireDepts/Request' element={<FSRequest/>}/>
           <Route path='/Locals/Dashboard' element={<LocDash/>}/>
           <Route path='/Locals/Supply' element={<LocSupply />} />
+          <Route path='/Login' element={<Login />} />
 
 
         </Routes>
