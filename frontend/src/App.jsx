@@ -1,14 +1,25 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css'
+import Homepage from './pages/Homepage';
+import FSDash from './pages/FSDash';
+import FSRequest from './pages/FSRequest';
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     <>
-      <h1 className='text-[red]'>Hello</h1>       
+      <BrowserRouter>
+        <Routes>
+        
+          <Route path='/' element={<Homepage/>}/>
+          <Route path='/FireDepts/Dashboard' element={<FSDash/>}/>
+          <Route path='FireDepts/Request' element={<FSRequest/>}/>
+
+
+        </Routes>
+      </BrowserRouter>        
     </>
   )
 }
