@@ -7,6 +7,7 @@ import FSRequest from './pages/FSRequest';
 import LocDash from './pages/LocDash';
 import LocSupply from './pages/LocSupply';
 import Login from './pages/Login';
+import Signup from './pages/Signup';
 
 function App() {
   
@@ -22,7 +23,7 @@ function App() {
           <Route path='/Locals/Dashboard' element={<LocDash/>}/>
           <Route path='/Locals/Supply' element={<LocSupply />} />
           <Route path='/Login' element={<Login />} />
-
+          <Route path='/Signup' element={<Signup />} />
 
         </Routes>
       </BrowserRouter>        
