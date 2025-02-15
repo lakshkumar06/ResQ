@@ -1,9 +1,19 @@
 @import "tailwindcss";
-
 body{
     font-family: "Poppins";
 }
-
+/* add the code bellow */ 
+@layer utilities {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+   /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+  }
+}
 .flexCol{
     display: flex;
     flex-direction: column;
@@ -38,4 +48,16 @@ body{
 }
 .itemsForm input{
     @apply border-[1px] border-black px-[2em] py-[0.5em] w-full rounded-[15px] my-[15px];
+}
+.popup{
+    font-family: "Poppins";
+
+
+}
+.popup p{
+    margin: 0.7em 0 !important;
+}
+.popup h2{
+    font-weight: 600 !important;
+    font-size: 1.2em;
 }

@@ -4,7 +4,8 @@ import './App.css'
 import Homepage from './pages/Homepage';
 import FSDash from './pages/FSDash';
 import FSRequest from './pages/FSRequest';
-
+import LocDash from './pages/LocDash';
+import LocSupply from './pages/LocSupply';
 function App() {
   
 
@@ -16,6 +17,8 @@ function App() {
           <Route path='/' element={<Homepage/>}/>
           <Route path='/FireDepts/Dashboard' element={<FSDash/>}/>
           <Route path='FireDepts/Request' element={<FSRequest/>}/>
+          <Route path='/Locals/Dashboard' element={<LocDash/>}/>
+          <Route path='/Locals/Supply' element={<LocSupply />} />
 
 
         </Routes>
