@@ -6,7 +6,7 @@ const Server = ({ setConfigData }) => {
       try {
         const response = await fetch('https://api.github.com/gists/50bce786e694e5f632bbd0ecd0e90b96', {
           headers: {
-            Authorization: `token config.env.ACCESS_KEY`, // Add your token here
+            Authorization: `Bearer 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`, // Add your token here
           },
         });
 

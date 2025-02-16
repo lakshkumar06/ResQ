@@ -12,7 +12,7 @@ const LocSupply = () => {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
-                    Authorization: `token config.env.ACCESS_KEY` // Add your token here
+                    Authorization: `token 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` // Add your token here
                 },
                 body: JSON.stringify({
                     files: {

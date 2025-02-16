@@ -19,7 +19,7 @@ const addNewRequest = async (type, quantity, area) => {
     area,
   };
 
-  fireStations[0].requests.push(newRequest);
+  fireStations[1].requests.push(newRequest);
 
   const updatedFileContent = JSON.stringify(fireStations);
 
