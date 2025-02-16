@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
-    <nav className='w-full py-[10px] px-[5vw] flex justify-between'>
+    <nav className='w-full py-[25px] px-[5vw] flex justify-between absolute z-1'>
         <div className=''>
         </div>
         <div className="flex gap-[1em] text-[20px]">

@@ -1,7 +1,16 @@
 @import "tailwindcss";
 body{
-    font-family: "Poppins";
+    font-family: "Poppins", serif;
 }
+*{
+    font-family: "Poppins", serif;
+
+}
+html{
+    scroll-behavior: smooth;
+
+}
+
 /* add the code bellow */ 
 @layer utilities {
     /* Hide scrollbar for Chrome, Safari and Opera */
@@ -51,8 +60,6 @@ body{
 }
 .popup{
     font-family: "Poppins";
-
-
 }
 .popup p{
     margin: 0.7em 0 !important;
