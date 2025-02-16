@@ -7,10 +7,10 @@ const Signup = () => {
 
   return (
     <div className="flex mx-auto">
-      <div className="w-1/2 min-h-screen flexCol pl-[10vw] pr-[4vw]">
+      <div className="w-[45%] min-h-screen flexCol pl-[10vw] pr-[4vw]">
         <img src="/Untitled.webp" alt="" className="" />
       </div>
-      <div className="w-1/2 min-h-screen flexCol">
+      <div className="w-[55%] min-h-screen flexCol">
         <p className="text-[28px] font-medium">Signup</p>
 
         {/* Buttons to toggle between Fire Station and Local Resident */}

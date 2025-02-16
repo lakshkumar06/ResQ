@@ -15,7 +15,7 @@ const FSRightSideBar = () => {
   });
 
   return (
-    <div className='w-[30%] bg-gray-100 min-h-screen px-[2vw] py-[50px]'>
+    <div className='w-[30%] bg-amber-50 min-h-screen px-[2vw] py-[50px]'>
       <p className='font-medium text-[24px]'>Resources</p>
       <div className="mt-[40px]">
         <div className='bg-red-900 rounded-[20px] text-white flex justify-between px-[20px] py-[10px]'>

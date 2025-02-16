@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../components/Header'
 import HeroHomepage from '../components/HeroHomepage'
 import {Link} from 'react-router-dom';
+import Footer from '../components/Footer';
 
 const Homepage = () => {
   return (
@@ -72,6 +73,7 @@ const Homepage = () => {
           <Link to='/Signup' className='mt-[50px] mainBtnRed mx-auto text-[20px] px-[1em] py-[0.5em] rounded-[15px]' >Create your Acccount Today</Link>
         </div>
       </section>
+      <Footer/>
     </div>
   )
 }

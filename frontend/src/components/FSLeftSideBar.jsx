@@ -2,7 +2,7 @@ import React from 'react'
 
 const FSLeftSideBar = ({  setSelectedSection, selectedSection  }) => {
   return (
-    <div className='w-1/5 h-screen bg-gray-200 px-[20px] py-[20px] flex flex-col justify-between sticky'>
+    <div className='w-1/5 h-screen bg-amber-50 px-[20px] py-[20px] flex flex-col justify-between sticky'>
       <div>
           <div className="flex bg-[#750000] w-full p-[6px] rounded-[100px] gap-[10px]">
           <img src="" alt="" className="w-[60px] h-[60px] rounded-[40px] bg-gray-200"  />
