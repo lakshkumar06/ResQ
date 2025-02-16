@@ -1,57 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-
-const fireStations = [
-    {
-      name: "Fire Station 1",
-      address: "411 East Main Street, Norman, OK 73069",
-      phone: "(405) 292-9780",
-      coordinates: [35.2226, -97.4395]
-    },
-    {
-      name: "Fire Station 2",
-      address: "2211 West Boyd Street, Norman, OK 73069",
-      phone: "(405) 292-9780",
-      coordinates: [35.2125, -97.4861]
-    },
-    {
-      name: "Fire Station 3",
-      address: "500 East Constitution Street, Norman, OK 73072",
-      phone: "(405) 292-9780",
-      coordinates: [35.2041, -97.4339]
-    },
-    {
-      name: "Fire Station 5",
-      address: "1050 168th Avenue NE, Norman, OK 73026",
-      phone: "(405) 292-9780",
-      coordinates: [35.2901, -97.2815]
-    },
-    {
-      name: "Fire Station 6",
-      address: "7405 East Alameda Drive, Norman, OK 73026",
-      phone: "(405) 292-9780",
-      coordinates: [35.2210, -97.3440]
-    },
-    {
-      name: "Fire Station 7",
-      address: "2207 Goddard Avenue, Norman, OK 73069",
-      phone: "(405) 292-9780",
-      coordinates: [35.2351, -97.4857]
-    },
-    {
-      name: "Fire Station 8",
-      address: "3901 36th Avenue NW, Norman, OK 73072",
-      phone: "(405) 292-9780",
-      coordinates: [35.2490, -97.4950]
-    },
-    {
-      name: "Fire Station 9",
-      address: "3001 East Alameda Street, Norman, OK 73071",
-      phone: "(405) 292-9780",
-      coordinates: [35.2215, -97.3960]
-    }
-  ];
+import axios from 'axios';
+import firestations from '../json/Firestations.json';
   
   const normalIcon = L.icon({
     iconUrl: '/fireIcon.png',
@@ -66,6 +17,9 @@ const fireStations = [
     const markers = useRef([]);
     const circles = useRef([]);
   
+    const [items, setItems] = useState([]);
+
+
     useEffect(() => {
       if (mapRef.current && !mapRef.current._leaflet_id) {
           const newMap = L.map(mapRef.current, {
@@ -89,7 +43,7 @@ const fireStations = [
         markers.current = [];
         circles.current = [];
   
-        fireStations.forEach(station => {
+        firestations.forEach(station => {
           const marker = L.marker(station.coordinates, { icon: normalIcon })
             .addTo(map)
             .bindPopup(`

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import requests from '../json/requests.json';
-
+import '../json/Firestations.json'; 
 const LocRequests = () => {
     const navigate = useNavigate();
 
