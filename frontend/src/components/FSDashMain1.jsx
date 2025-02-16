@@ -10,7 +10,7 @@ const FSDashMain = () => {
           Welcome,
         </p>
         <p className='text-[40px] font-semibold'>
-        Norman Fire Department
+            Norman Fire Department Fire Station 2
 
         </p>
       </div>

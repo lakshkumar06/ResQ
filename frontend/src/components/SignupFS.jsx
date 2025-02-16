@@ -48,7 +48,7 @@ const SignupFS = () => {
            
             <div className="flex gap-[1em] justify-end">
             <button className='mainBtnGray w-fit py-[0.5em] px-[2em] rounded-[100px] mt-[1em]'>Login</button>
-                <button className='mainBtnRed w-fit py-[0.5em] px-[2em] rounded-[100px] mt-[1em]'>Sign Up</button>
+                <a href='/FireDepts/Dashboard/Norman1' className='mainBtnRed w-fit py-[0.5em] px-[2em] rounded-[100px] mt-[1em]'>Sign Up</a>
             </div>
         </form>
     </div>

@@ -8,6 +8,7 @@ import LocDash from './pages/LocDash';
 import LocSupply from './pages/LocSupply';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import FSDash1 from './pages/FSDash1';
 
 function App() {
   
@@ -18,7 +19,8 @@ function App() {
         <Routes>
         
           <Route path='/' element={<Homepage/>}/>
-          <Route path='/FireDepts/Dashboard' element={<FSDash/>}/>
+          <Route path='/FireDepts/Dashboard/Norman1' element={<FSDash/>}/>
+          <Route path='/FireDepts/Dashboard/Norman2' element={<FSDash1/>}/>
           <Route path='FireDepts/Request' element={<FSRequest/>}/>
           <Route path='/Locals/Dashboard' element={<LocDash/>}/>
           <Route path='/Locals/Supply' element={<LocSupply />} />

@@ -9,7 +9,7 @@ const LocDashMain = () => {
           Welcome,
         </p>
         <p className='text-[40px] font-semibold'>
-          Joeseph
+          Laksh
         </p>
       </div>
 

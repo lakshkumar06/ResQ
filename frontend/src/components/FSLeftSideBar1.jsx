@@ -1,13 +1,13 @@
 import React from 'react'
 
-const FSLeftSideBar = ({  setSelectedSection, selectedSection  }) => {
+const FSLeftSideBar1 = ({  setSelectedSection, selectedSection  }) => {
   return (
-    <div className='w-1/5 h-screen bg-gray-100 px-[20px] py-[40px] flex flex-col justify-between sticky'>
+    <div className='w-1/5 h-screen bg-gray-100 px-[20px] py-[20px] flex flex-col justify-between sticky'>
       <div>
           <div className="flex bg-[#750000] w-full p-[6px] rounded-[100px] gap-[10px]">
           <img src="" alt="" className="w-[60px] h-[60px] rounded-[40px] bg-gray-200"  />
           <div className="flexCol">
-              <p className='text-white text-[18px]'>Norman Fire Dept</p>
+              <p className='text-white text-[18px]'>Norman Fire Station 2</p>
               <p className='text-white text-[14px] underline leading-[1em]'>blah@blah.com</p>
           </div>
 
@@ -47,4 +47,4 @@ const FSLeftSideBar = ({  setSelectedSection, selectedSection  }) => {
   )
 }
 
-export default FSLeftSideBar
+export default FSLeftSideBar1

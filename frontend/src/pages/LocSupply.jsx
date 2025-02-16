@@ -25,7 +25,7 @@ const LocSupply = () => {
 
             if (response.ok) {
                 alert('Request fulfilled successfully! You have been added as a volunteer.');
-                navigate('/Locals/Requests'); // Redirect back to requests page
+                navigate('/Locals/Dashboard'); // Redirect back to requests page
             } else {
                 throw new Error('Failed to update the request');
             }
@@ -71,7 +71,7 @@ const LocSupply = () => {
 
                 <button 
                     className='mainBtnRed w-full flex justify-center py-[0.5em] rounded-[100px] mt-[1em]'
-                    onClick={handleConfirm}
+                    onClick={handleConfirm} 
                 >
                     Confirm
                 </button>

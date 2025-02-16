@@ -8,8 +8,8 @@ const LocLeftSideBar = ({  setSelectedSection, selectedSection  }) => {
           <div className="flex bg-[#750000] w-full p-[6px] rounded-[100px] gap-[10px]">
           <img src="" alt="" className="w-[60px] h-[60px] rounded-[40px] bg-gray-200"  />
           <div className="flexCol">
-              <p className='text-white text-[18px]'>Blah Blah</p>
-              <p className='text-white text-[14px] underline leading-[1em]'>blah@blah.com</p>
+              <p className='text-white text-[18px]'>Laksh Kumar</p>
+              <p className='text-white text-[14px] underline leading-[1em]'>k.laksh@hotmail.com</p>
           </div>
 
         </div>
