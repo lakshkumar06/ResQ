@@ -1,37 +1,41 @@
-import React from 'react'
+import React, { useState } from 'react';
+import SignupFS from '../components/SignupFS';
+import SignupLoc from '../components/SignupLoc';
 
 const Signup = () => {
+  const [isFireStation, setIsFireStation] = useState(false); // State to track active button
+
   return (
-    <div className='flex w-4/5 mx-auto'>
-        <div className='w-1/2 min-h-screen flexCol'>
-            <img src="/Untitled.webp" alt="" className="" />
-        </div>
-        <div className='w-1/2 min-h-screen flexCol'>
-        <p className='text-[28px] font-medium'>Signup</p>
+    <div className="flex mx-auto">
+      <div className="w-1/2 min-h-screen flexCol pl-[10vw] pr-[4vw]">
+        <img src="/Untitled.webp" alt="" className="" />
+      </div>
+      <div className="w-1/2 min-h-screen flexCol">
+        <p className="text-[28px] font-medium">Signup</p>
 
-        <form className='text-[20px]'>
-            <label htmlFor="" className="">Name:</label><br/>
-            <input type="text" className="w-full px-[2em] py-[0.5em] border-[1px] border-gray-300 px-[2em] py-[0.5em] w-full rounded-[15px] my-[15px]"/>
-            <label htmlFor="" className="">Zip Code:</label><br/>
-            <input type="number" className="w-full px-[2em] py-[0.5em] border-[1px] border-gray-300 px-[2em] py-[0.5em] w-full rounded-[15px] my-[15px]"/>
-            <label htmlFor="acctype" className="">Account Type: </label> <br/>
-        <select id="acctype" name="acctype" className='bw-full px-[2em] py-[0.5em] border-[1px] border-gray-300 px-[2em] py-[0.5em] w-full rounded-[15px] my-[15px]'>
-            <option value="food">Local Resident</option>
-            <option value="medical">Fire Station</option>
-        </select>
-            <label htmlFor="" className=''>Email Address:</label><br/>
-            <input type="email" name="" id="" className='w-full px-[2em] py-[0.5em] border-[1px] border-gray-300 px-[2em] py-[0.5em] w-full rounded-[15px] my-[15px]'/><br/>
-            <label htmlFor="" className=''>Password:</label><br/>
-            <input type="password" name="" id="" className='w-full px-[2em] py-[0.5em] border-[1px] border-gray-300 px-[2em] py-[0.5em] w-full rounded-[15px] my-[15px]'/>
-            <div className="flex gap-[1em] justify-end">
-            <button className='mainBtnGray w-fit py-[0.5em] px-[2em] rounded-[100px] mt-[1em]'>Login</button>
-                <button className='mainBtnRed w-fit py-[0.5em] px-[2em] rounded-[100px] mt-[1em]'>Sign Up</button>
-            </div>
-        </form>
+        {/* Buttons to toggle between Fire Station and Local Resident */}
+        <div className="flex bg-red-900 w-fit rounded-[100px] p-[4px] mt-[1em]">
+          <button
+            className={`w-fit py-[0.5em] px-[1em] rounded-[100px] ${!isFireStation ? 'activeSignupOption' : 'text-white'}`}
+            onClick={() => setIsFireStation(false)}
+          >
+            Local
+          </button>
+          <button
+            className={`w-fit py-[0.5em] px-[1em] rounded-[100px] ${isFireStation ? 'activeSignupOption' : 'text-white'}`}
+            onClick={() => setIsFireStation(true)}
+          >
+            Fire Department
+          </button>
         </div>
-      
+
+        {/* Show respective component based on the active button */}
+        {isFireStation ? <SignupFS /> : <SignupLoc />}
+
+
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Signup
+export default Signup;
