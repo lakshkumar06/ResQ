@@ -23,33 +23,8 @@ const loadJsonData = () => {
   }
 };
 
-// Function to send emails
-const sendEmail = async (recipient, subject, message) => {
-  let transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS,
-    },
-  });
-
-  let mailOptions = {
-    from: process.env.EMAIL_USER,
-    to: recipient,
-    subject: subject,
-    text: message,
-  };
-
-  try {
-    await transporter.sendMail(mailOptions);
-    console.log(`Email sent to ${recipient}`);
-  } catch (error) {
-    console.error("Error sending email:", error);
-  }
-};
-
-// Function 1: AI-powered daily report
-const generateDailyReport = async () => {
+// Function to generate summary and store in notifications
+export const generateSummaryAndStore = async () => {
   const jsonData = loadJsonData();
   if (!jsonData) return;
 
@@ -59,45 +34,16 @@ const generateDailyReport = async () => {
   `;
 
   const response = await llm.invoke(prompt);
-  console.log("Daily Report:\n", response.content);
+  const summary = response.content;
+
+  // Store summary in notifications of Fire Station 2
+  jsonData[1].notifications.push({
+    message: summary,
+    sender: "Firebot",
+    time: new Date().toISOString(),
+  });
+
+  // Save updated JSON data
+  fs.writeFileSync("main.json", JSON.stringify(jsonData, null, 2));
+  console.log("Summary stored in Fire Station 2 notifications.");
 };
-
-// Function 2: Notify volunteers if a fire station requests resources
-const notifyVolunteers = async () => {
-  const jsonData = loadJsonData();
-  if (!jsonData) return;
-
-  const fireStations = jsonData.fire_stations || [];
-  for (const station of fireStations) {
-    if (station.resources_requested && station.resources_requested.length > 0) {
-      const volunteers = jsonData.volunteers || [];
-      const message = `Fire station ${station.name} requested the following resources: ${station.resources_requested.join(", ")}`;
-      
-      for (const volunteer of volunteers) {
-        await sendEmail(volunteer.email, "Urgent: Fire Station Needs Help!", message);
-      }
-    }
-  }
-};
-
-// Function 3: Send daily event updates to other fire stations
-const notifyFireStations = async () => {
-  const jsonData = loadJsonData();
-  if (!jsonData) return;
-
-  const fireStations = jsonData.fire_stations || [];
-  const dailyEvents = jsonData.daily_events || "No new updates today.";
-  
-  for (const station of fireStations) {
-    await sendEmail(station.email, "Daily Fire Station Update", dailyEvents);
-  }
-};
-
-// Run all functions
-const run = async () => {
-  await generateDailyReport();
-  await notifyVolunteers();
-  await notifyFireStations();
-};
-
-run();
