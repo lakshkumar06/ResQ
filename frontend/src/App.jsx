@@ -23,7 +23,6 @@ function App() {
           <Route path='/FireDepts/Dashboard/Norman2' element={<FSDash1/>}/>
           <Route path='FireDepts/Norman1/Request' element={<FSRequest/>}/>
           <Route path='FireDepts/Norman2/Request' element={<FSRequest1/>}/>
-
           <Route path='/Locals/Dashboard' element={<LocDash/>}/>
           <Route path='/Locals/Supply' element={<LocSupply />} />
           <Route path='/Login' element={<Login />} />
