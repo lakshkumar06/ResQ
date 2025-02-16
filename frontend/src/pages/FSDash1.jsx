@@ -9,9 +9,9 @@ const FSDash1 = () => {
 
   return (
     <div className='flex'>
-      <FSLeftSideBar setSelectedSection={setSelectedSection} selectedSection={selectedSection} />
-      {selectedSection === 'volunteer' ? <FSVolunteers /> : <FSDashMain />}
-      <FSRightSideBar />
+      <FSLeftSideBar1 setSelectedSection={setSelectedSection} selectedSection={selectedSection} />
+      {selectedSection === 'volunteer' ? <FSVolunteers /> : <FSDashMain1 />}
+      <FSRightSideBar1 />
     </div>
   );
 };

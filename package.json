@@ -1,0 +1,12 @@
+{
+  "type": "module",
+  "dependencies": {
+    "@langchain/community": "^0.3.30",
+    "@langchain/openai": "^0.4.4",
+    "dotenv": "^16.4.7",
+    "fs": "^0.0.1-security",
+    "langchain": "^0.3.15",
+    "nodemailer": "^6.10.0",
+    "openai": "^4.85.1"
+  }
+}

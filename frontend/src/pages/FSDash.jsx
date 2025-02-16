@@ -4,7 +4,7 @@ import FSDashMain from '../components/FSDashMain';
 import FSRightSideBar from '../components/FSRightSideBar';
 import FSVolunteers from '../components/FSVolunteers'; // Import Volunteers component
 
-const FSDash1 = () => {
+const FSDash = () => {
   const [selectedSection, setSelectedSection] = useState('dashboard'); // Default to Dashboard
 
   return (
@@ -16,5 +16,5 @@ const FSDash1 = () => {
   );
 };
 
-export default FSDash1;
+export default FSDash;
 
