@@ -26,7 +26,7 @@ const addNewRequest = async (type, quantity, area) => {
   await fetch(gistUrl, {
     method: 'PATCH',
     headers: {
-      Authorization: `Bearer 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`,
+      Authorization: `Bearer config.env.ACCESS_KEY`,
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
