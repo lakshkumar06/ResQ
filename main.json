@@ -1,0 +1,98 @@
+[
+  {
+    "name": "Fire Station 1",
+    "address": "411 East Main Street, Norman, OK 73069",
+    "phone": "(405) 292-9780",
+    "coordinates": [35.2226, -97.4395],
+    "volunteers": [
+      {
+        "name": "John Doe",
+        "age": 25,
+        "assistanceType": "Rescue"
+      },
+      {
+        "name": "Jane Smith",
+        "age": 30,
+        "assistanceType": "Medical"
+      }
+    ],
+    "notifications": [
+      {
+        "message": "Emergency alert: Fire near 5th Avenue.",
+        "sender": "Fire Station 2",
+        "time": "2025-02-16T08:00:00Z"
+      },
+      {
+        "message": "Routine checkup required for equipment.",
+        "sender": "Fire Station 7",
+        "time": "2025-02-16T09:15:00Z"
+      }
+    ],
+    "requests": [
+      {
+        "type": "medical",
+        "quantity": 10,
+        "area": "5th Avenue"
+      }
+    ]
+  },
+  {
+    "name": "Fire Station 2",
+    "address": "2211 West Boyd Street, Norman, OK 73069",
+    "phone": "(405) 292-9780",
+    "coordinates": [35.2125, -97.4861],
+    "volunteers": [
+      {
+        "name": "Alice Johnson",
+        "age": 28,
+        "assistanceType": "Firefighting"
+      },
+      {
+        "name": "Bob White",
+        "age": 35,
+        "assistanceType": "Rescue"
+      }
+    ],
+    "notifications": [
+      {
+        "message": "Request for backup at location XYZ.",
+        "sender": "Fire Station 5",
+        "time": "2025-02-16T07:45:00Z"
+      }
+    ],
+    "requests": [
+      {
+        "type": "food",
+        "quantity": 15,
+        "area": "Location XYZ"
+      }
+    ]
+  },
+  {
+    "name": "Fire Station 3",
+    "address": "500 East Constitution Street, Norman, OK 73072",
+    "phone": "(405) 292-9780",
+    "coordinates": [35.2041, -97.4339],
+    "volunteers": [
+      {
+        "name": "Michael Brown",
+        "age": 32,
+        "assistanceType": "Rescue"
+      }
+    ],
+    "notifications": [
+      {
+        "message": "Medical emergency assistance needed in vicinity.",
+        "sender": "Fire Station 6",
+        "time": "2025-02-16T08:30:00Z"
+      }
+    ],
+    "requests": [
+      {
+        "type": "medical",
+        "quantity": 5,
+        "area": "Vicinity of Constitution Street"
+      }
+    ]
+  }
+]

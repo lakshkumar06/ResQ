@@ -1,0 +1,56 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Welcome{% endblock %}
+
+   
+
+{% block content %}
+<h2>Sign Up</h2>
+<form method="post" action="?">
+    {% csrf_token %}
+    
+    <!-- Common Fields -->
+     {{form.username.label_tag}}{{ form.username }}
+    {{ form.email.label_tag }} {{ form.email }}
+    {{ form.password1.label_tag }} {{ form.password1 }}
+    {{ form.password2.label_tag }} {{ form.password2 }}
+    {{ form.first_name.label_tag }} {{ form.first_name }}
+    {{ form.last_name.label_tag }} {{ form.last_name }}
+    {{ form.phone_number.label_tag }} {{ form.phone_number }}
+    {{ form.zip_code.label_tag }} {{ form.zip_code }}
+    {{ form.user_type.label_tag }} {{ form.user_type }}
+    
+    <!-- Conditional Fields -->
+    <div id="local-fields" style="display:none;">
+        {{ form.date_of_birth.label_tag }} {{ form.date_of_birth }}
+        {{ form.occupation.label_tag }} {{ form.occupation }}
+    </div>
+    
+    <div id="fire-fields" style="display:none;">
+        {{ form.station_code.label_tag }} {{ form.station_code }}
+        {{ form.zip_codes.label_tag }} {{ form.zip_codes }}
+        
+    </div>
+    
+    <div id="ngo-fields" style="display:none;">
+        {{ form.organization_name.label_tag }} {{ form.organization_name }}
+        {{ form.mission_statement.label_tag }} {{ form.mission_statement }}
+        {{ form.registration_number.label_tag }} {{ form.registration_number }}
+    </div>
+    
+    <input type="submit" class="py-4 px-8 text-lg bg-teal-500 hover:bg-teal-700 rounded-xl text-white"></input>
+</form>
+
+<script>
+    // Show/hide fields based on user type selection
+    document.getElementById('id_user_type').addEventListener('change', function() {
+        const type = this.value;
+        document.querySelectorAll('[id$="-fields"]').forEach(div => {
+            div.style.display = 'none';
+        });
+        if(type === 'LOCAL') document.getElementById('local-fields').style.display = 'block';
+        if(type === 'FIRE_STATION') document.getElementById('fire-fields').style.display = 'block';
+        if(type === 'NGO') document.getElementById('ngo-fields').style.display = 'block';
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,76 @@
+@import "tailwindcss";
+body{
+    font-family: "Poppins", serif;
+}
+*{
+    font-family: "Poppins", serif;
+
+}
+html{
+    scroll-behavior: smooth;
+
+}
+
+/* add the code bellow */ 
+@layer utilities {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+   /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+  }
+}
+.flexCol{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mainBtn{
+    @apply text-[24px] px-[2em] py-[1em] rounded-[20px];
+}
+.mainBtnRed{
+    @apply bg-red-900 text-white;
+    transition: 0.2s ease-in;
+
+}
+.mainBtnGray{
+    @apply bg-gray-300 text-red-900 text-wrap;
+    transition: 0.2s ease-in;
+}
+.mainBtnRed:hover{
+    @apply bg-gray-300 text-red-900
+
+}
+.mainBtnGray:hover {
+    @apply bg-gray-400;
+
+
+}
+
+.itemsForm{
+    @apply border-gray-300 border-[1px] mt-[50px] px-[5vw] py-[50px] text-[24px] rounded-[20px];
+    box-shadow: 0 0 20px 5px #dfdfdf ;
+}
+.itemsForm input{
+    @apply border-[1px] border-black px-[2em] py-[0.5em] w-full rounded-[15px] my-[15px];
+}
+.popup{
+    font-family: "Poppins";
+}
+.popup p{
+    margin: 0.7em 0 !important;
+}
+.popup h2{
+    font-weight: 600 !important;
+    font-size: 1.2em;
+}
+
+.activeSignupOption{
+    background: white;
+    
+
+}
